@@ -8,7 +8,7 @@ public class AplikasiTodoList {
     public static void main(String[] args) {
      
         
-       testInput();
+        testViewTodList();
       
 
 
@@ -22,6 +22,8 @@ public class AplikasiTodoList {
      */
 
     public static void showTodoList() {
+
+        System.out.println("TODOLIST");
         for(var i= 0; i< model.length; i++){
             var todo = model[i];
             var no = i+1;
@@ -166,8 +168,40 @@ public class AplikasiTodoList {
      */
 
     public static void viewShowTodoList(){
+        while(true){       
+        showTodoList();
 
+        System.out.println("Menu :  ");
+        System.out.println("1. Tambah");
+        System.out.println("2. Hapus");
+        System.out.println("X. Keluar");
 
+        var input = input ("Pilih");
+        if(input.equals("1")){
+            viewAddTodoList();
+        }
+        else if(input.equals("2")){
+            viewRremoveTodoList();
+        }
+        else if(input.equals("3")){
+            
+        }
+        else {
+            System.out.println("Pilihan tidak dimengerti");
+            break;
+        }
+    }
+    }
+
+    public static void testViewTodList(){
+        addTodoList("Satu"); 
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");  
+
+        viewShowTodoList();
+       
     }
     /**
      * Menampilkan view  menambahkan todo list
