@@ -78,13 +78,13 @@ public class AplikasiTodoList {
 
     }
 
-    public static void testAddTodoList() {
+    // public static void testAddTodoList() {
 
-        for(int i = 0; i < 25; i++){
-            addTodoList("Contoh Todo ke ." + i);
-        }
-        showTodoList();
-    }
+    //     for(int i = 0; i < 25; i++){
+    //         addTodoList("Contoh Todo ke ." + i);
+    //     }
+    //     showTodoList();
+    // }
 
     
     /**
@@ -120,26 +120,26 @@ public class AplikasiTodoList {
 
     }
 
-    public static void testRemoveTodoList(){
-        // addTodoList("Satu");
-        // addTodoList("Dua");
-        // addTodoList("Tiga");
-        // addTodoList("Empat");
-        // addTodoList("Lima");
-        // addTodoList("Empat");
-        // addTodoList("Lima");
+    // public static void testRemoveTodoList(){
+    //     // addTodoList("Satu");
+    //     // addTodoList("Dua");
+    //     // addTodoList("Tiga");
+    //     // addTodoList("Empat");
+    //     // addTodoList("Lima");
+    //     // addTodoList("Empat");
+    //     // addTodoList("Lima");
 
-        var result = removeTodoList(20);
-        System.out.println(result);
+    //     var result = removeTodoList(20);
+    //     System.out.println(result);
 
-        result = removeTodoList(7);
-        System.out.println(result);
+    //     result = removeTodoList(7);
+    //     System.out.println(result);
 
-        result = removeTodoList(2);
-        System.out.println(result);
+    //     result = removeTodoList(2);
+    //     System.out.println(result);
 
-        showTodoList();
-    }
+    //     showTodoList();
+    // }
 
 
     public static String input(String info) {
@@ -181,8 +181,10 @@ public class AplikasiTodoList {
         else if(input.equals("2")){
             viewRemoveTodoList();
         }
-        else if(input.equals("3")){
-            
+        else if(input.equals("x")){
+            System.out.println("Anda telah keluar");
+            break;
+           
             
         }
         else {
@@ -237,6 +239,7 @@ public class AplikasiTodoList {
 
         if(number.equals("x")){
             // Batal
+            
         }
         else{
             // Cek result
