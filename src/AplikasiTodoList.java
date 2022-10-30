@@ -8,7 +8,7 @@ public class AplikasiTodoList {
     public static void main(String[] args) {
      
         
-        testViewTodList();
+        testViewRemoveTodoList();
       
 
 
@@ -181,7 +181,7 @@ public class AplikasiTodoList {
             viewAddTodoList();
         }
         else if(input.equals("2")){
-            viewRremoveTodoList();
+            viewRemoveTodoList();
         }
         else if(input.equals("3")){
             
@@ -193,7 +193,7 @@ public class AplikasiTodoList {
     }
     }
 
-    public static void testViewTodList(){
+    public static void testViewShowTodoListt(){
         addTodoList("Satu"); 
         addTodoList("Dua");
         addTodoList("Tiga");
@@ -207,14 +207,59 @@ public class AplikasiTodoList {
      * Menampilkan view  menambahkan todo list
      */
     public static void viewAddTodoList(){
+        System.out.println("Menambah TodoList ");
+        var todo  = input("x jika batal");
 
+        if(todo.equals("X")){
+            // Batal
+        }
+        else {
+            addTodoList(todo);
+        }
+
+
+    }
+
+    public static void testViewAddTodoList(){
+        viewAddTodoList();
+        showTodoList();
     }
     
     /**
      * Menampilkan view menghapus todo list
      */
-    public static void viewRremoveTodoList(){
+    public static void viewRemoveTodoList(){
+        System.out.println("Menghapus TodoList");
 
+        // Menerima input dar i  user
+        var number = input("Nomor yang dihapus");
+        
+
+        if(number.equals("x")){
+            // Batal
+        }
+        else{
+            // Cek result
+            boolean success = removeTodoList(Integer.valueOf(number));
+            if(!success){
+                // Jika gagal
+                System.out.println("Gagal menghapus todolist : " + number);
+            }
+
+        }
+
+    }
+
+
+    public static void testViewRemoveTodoList(){
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+
+
+        showTodoList();
+        viewRemoveTodoList();
+        showTodoList();
     }
     
 }
